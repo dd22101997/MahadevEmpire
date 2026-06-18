@@ -8,73 +8,84 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f5f5;
+      background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
     }
     nav {
-      background: #4a90e2;
+      background: rgba(74, 144, 226, 0.9);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
     }
     nav h1 {
       color: white;
       margin: 0;
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
     nav ul {
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       margin: 0;
       padding: 0;
     }
     nav ul li {
-      margin-left: 20px;
+      margin: 5px 10px;
     }
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
+      font-size: 0.9em;
     }
     nav ul li a:hover {
       color: #ffd700;
     }
     header {
-      background: linear-gradient(135deg, #4a90e2, #9013fe);
+      background: rgba(144, 19, 254, 0.8);
       color: white;
       text-align: center;
       padding: 60px 20px;
     }
     header h2 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2em;
     }
     header p {
-      font-size: 1.2em;
+      font-size: 1em;
       margin-top: 10px;
     }
     section {
-      padding: 50px 20px;
+      padding: 40px 20px;
       text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      margin: 15px;
+      border-radius: 10px;
     }
     .agent-section {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      background: white;
-      padding: 50px 20px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 20px;
+      border-radius: 10px;
     }
     .agent-section img {
       border-radius: 10px;
-      max-width: 250px;
-      margin: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 200px;
+      margin: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     .agent-info {
-      max-width: 500px;
+      max-width: 400px;
       text-align: left;
     }
     .agent-info h3 {
@@ -82,22 +93,45 @@
     }
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
+      margin-top: 15px;
+      padding: 10px 20px;
       background: #9013fe;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       transition: background 0.3s;
+      font-size: 0.9em;
     }
     .btn:hover {
       background: #4a90e2;
     }
+    form input {
+      width: 90%;
+      max-width: 300px;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
     footer {
-      background: #333;
+      background: rgba(51, 51, 51, 0.9);
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
+      font-size: 0.8em;
+    }
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header h2 {
+        font-size: 1.5em;
+      }
+      nav ul {
+        justify-content: center;
+      }
+      .agent-info {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -120,7 +154,7 @@
   </header>
 
   <section class="agent-section">
-    <img src="https://via.placeholder.com/250x300.png?text=Sachin+Rathee" alt="Agent Sachin Rathee">
+    <img src="https://via.placeholder.com/200x250.png?text=Sachin+Rathee" alt="Agent Sachin Rathee">
     <div class="agent-info">
       <h3>Meet Your Help Agent: Sachin Rathee</h3>
       <p>
@@ -150,8 +184,8 @@
   <section id="signin">
     <h2>Sign In</h2>
     <form>
-      <input type="email" placeholder="Email" required><br><br>
-      <input type="password" placeholder="Password" required><br><br>
+      <input type="email" placeholder="Email" required><br>
+      <input type="password" placeholder="Password" required><br>
       <button type="submit" class="btn">Sign In</button>
     </form>
   </section>
@@ -159,9 +193,9 @@
   <section id="signup">
     <h2>Sign Up</h2>
     <form>
-      <input type="text" placeholder="Full Name" required><br><br>
-      <input type="email" placeholder="Email" required><br><br>
-      <input type="password" placeholder="Password" required><br><br>
+      <input type="text" placeholder="Full Name" required><br>
+      <input type="email" placeholder="Email" required><br>
+      <input type="password" placeholder="Password" required><br>
       <button type="submit" class="btn">Sign Up</button>
     </form>
   </section>
